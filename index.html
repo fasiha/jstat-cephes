@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Gamma explorations</title>
+    <style>
+
+svg {
+  font: 10px sans-serif;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.tile {
+  shape-rendering: crispEdges;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+
+</style>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="https://rawgit.com/jstat/jstat/master/dist/jstat.min.js" charset="utf-8"></script>
+<script src="https://rawgit.com/lodash/lodash/master/lodash.min.js" charset="utf-8"></script>  
+</head>
+<body>
+<h1>Introduction</h1>
+<a href="http://jstat.github.io/">jStat</a> versus <a href="http://www.moshier.net/#Cephes">Cephes</a> (<a href="https://github.com/jeremybarnes/cephes">mirror</a>): upper incomplete gamma function. 
+<ul><li>
+not regularized: <tt>gammaUpper(x, a) = integral(t^(x-1) exp(-t), t=a..Infinity)</tt></li>
+<li>regularized: <tt>gammaUpperReg(x, a) = gammaUpper(x, a) / gamma(x)</tt></li>
+</ul>
+
+<p>
+Plots show log10 relative error: <tt>|jStat - Cephes| / |Cephes|</tt>. 
+<script src="cephes.js" charset="utf-8"></script>
+<script src="jstatCephes.js" charset="utf-8"></script>
+</body>
+</html>
