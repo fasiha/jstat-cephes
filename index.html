@@ -29,6 +29,8 @@ svg {
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="https://rawgit.com/jstat/jstat/master/dist/jstat.min.js" charset="utf-8"></script>
 <script src="https://rawgit.com/lodash/lodash/master/lodash.min.js" charset="utf-8"></script>  
+<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+<script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
 </head>
 <body>
 <h1>Introduction</h1>
@@ -41,6 +43,6 @@ not regularized: <tt>gammaUpper(x, a) = integral(t^(x-1) exp(-t), t=a..Infinity)
 <p>
 Plots show log10 relative error: <tt>|jStat - Cephes| / |Cephes|</tt>. 
 <script src="cephes.js" charset="utf-8"></script>
-<script src="jstatCephes.js" charset="utf-8"></script>
+<script type="module" src="jstatCephes.js" charset="utf-8"></script>
 </body>
 </html>
